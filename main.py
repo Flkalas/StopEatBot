@@ -29,7 +29,7 @@ def get_now_kst():
     return datetime.datetime.now(pytz.timezone('Asia/Seoul'))
 
 def get_guide_phrase(user):
-    return "{3} {2}님! @stopeatbot 으로 가셔서 모바일 알람을 등록해주세요! 시간마다 모바일로 알람이 갈거에요!".format( user.name, '@'+user.screen_name)
+    return "{1} {0}님! @stopeatbot 으로 가셔서 모바일 알람을 등록해주세요! 시간마다 모바일로 알람이 갈거에요!".format( user.name, '@'+user.screen_name)
 
 def get_phrase():
     now = get_now_kst()
