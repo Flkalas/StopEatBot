@@ -33,7 +33,7 @@ def get_guide_phrase(user):
 
 def get_phrase():
     now = get_now_kst()
-    phrase = "{0}시입니다. 자기 전 6시간 내에 먹으면 소화가 잘 되지 않고 살이 찔 수 있어요! 지금 먹으면 {1}시 넘어서 자야하니 먹지마세요!".format(now.hour-12, (now.hour-6)%12)
+    phrase = "{0}시입니다. 자기 전 6시간 내에 먹으면 소화가 잘 되지 않고 살이 찔 수 있어요! 지금 먹으면 {1}시 넘어서 자야하니 먹지마세요!".format(now.hour%12, (now.hour-6)%12)
     return phrase
 
 def send_notification(api):
